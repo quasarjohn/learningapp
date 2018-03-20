@@ -1,0 +1,64 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.berstek.learningapp.view.module.IntroFragment">
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/duck"
+        app:layout_constraintBottom_toTopOf="@+id/headerTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="To the Learner"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/font_24"
+        app:layout_constraintBottom_toBottomOf="@+id/img"
+        app:layout_constraintStart_toEndOf="@+id/img"
+        app:layout_constraintTop_toTopOf="@+id/img" />
+
+    <com.berstek.learningapp.customClasses.SmartTextView
+
+        android:id="@+id/headerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        In quis congue nunc. Morbi posuere, dui eget fermentum lobortis, nibh erat
+        aliquet arcu, id venenatis ipsum lectus at justo."
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/font_20"
+        app:justified="true"
+        app:layout_constraintBottom_toTopOf="@+id/subheaderTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img" />
+
+    <TextView
+        android:id="@+id/subheaderTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/font_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerTxt" />
+</android.support.constraint.ConstraintLayout>
